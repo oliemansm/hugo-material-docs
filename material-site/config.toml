@@ -15,10 +15,10 @@ googleAnalytics = ""
 
 	# Repository
 	provider = "GitHub"
+	repo_name = "hugo-material-docs"
 	repo_url = "https://github.com/digitalcraftsman/hugo-material-docs"
 
 	version = "1.0.0"
-	logo = "images/logo.png"
 	favicon = ""
 
 	permalink = "#"
@@ -29,6 +29,12 @@ googleAnalytics = ""
 
 	# Syntax highlighting theme
 	highlight_css  = ""
+
+	search_enabled = true
+
+	[params.logo]
+		icon = ""
+		image = "images/logo.png"
 
 	[params.palette]
     	primary = "red"
