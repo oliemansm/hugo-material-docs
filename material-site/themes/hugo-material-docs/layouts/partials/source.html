@@ -33,12 +33,13 @@
   {{ else if (in (trim .repo_url " " | lower) "bitbucket") }}
     {{ $repo_type = "bitbucket" }}
   {{ end }}
+  {{ $svg := printf "/images/icons/%s.svg#__%s" $repo_type $repo_type }}
   <a href="{{ .repo_url }}" title="Go to repository"
       class="md-source" data-md-source='{{ $repo_type }}'>
     {{ with $repo_type }}
       <div class="md-source__icon">
         <svg viewBox="0 0 24 24" width="24" height="24">
-          <use xlink:href='/images/icons/{{ . }}.svg#__{{ . }}' width="24" height="24"></use>
+          <use xlink:href='#__{{ $repo_type }}' width="24" height="24"></use>
         </svg>
       </div>
     {{ end }}

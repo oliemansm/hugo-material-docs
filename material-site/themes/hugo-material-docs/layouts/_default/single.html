@@ -5,6 +5,14 @@
 	{{ .Scratch.Set "repo_id" $repo_id }}
 {{ end }}
 
+<svg class="md-svg">
+  <defs>
+		{{ partial "icons/github.svg" }}
+		{{ partial "icons/bitbucket.svg" }}
+		{{ partial "icons/gitlab.svg" }}
+  </defs>
+</svg>
+
 <!--
   State toggles - we need to set autocomplete="off" in order to reset the
   drawer on back button invocation in some browsers
