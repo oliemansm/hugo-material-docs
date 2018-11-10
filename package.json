@@ -2,9 +2,9 @@
   "name": "hugo-material-docs",
   "version": "1.0.0",
   "description": "Material Docs for Hugo",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "css:build": "node-sass --include-path scss src/assets/stylesheets --output dist/css",
+    "build": "npm run css:build"
   },
   "repository": {
     "type": "git",
@@ -69,4 +69,8 @@
     "webpack": "^3.4.1",
     "webpack-manifest-plugin": "^1.3.2"
   },
+  "engines": {
+    "node": ">= 8"
+  },
+  "private": true
 }
