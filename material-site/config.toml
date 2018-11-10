@@ -40,15 +40,16 @@ googleAnalytics = ""
     	primary = "red"
     	accent  = "teal"
 
-    [params.font]
-    	text = "Roboto"
-    	code = "Roboto Mono"
+  [params.font]
+  	text = "Roboto"
+  	code = "Roboto Mono"
 
 
 [social]
-	twitter = ""
-	github  = "digitalcraftsman"
-	email   = "hello@email.com"
+	globe		 = "https://www.scopisto.com"
+	twitter  = "https://twitter.com/oliemansm"
+	github   = "https://github.com/oliemansm"
+	linkedin = "https://linkedin.com/in/scopisto"
 
 
 [[menu.main]]

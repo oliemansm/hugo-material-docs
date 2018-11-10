@@ -58,11 +58,9 @@
 		<div class="md-content">
       <article class="md-content__inner md-typeset">
 				<!-- Content -->
-				{{ range where .Site.Pages "Type" "index" }}
-					<h1>{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
+				<h1>{{ .Title }} {{ if .IsDraft }} (Draft){{ end }}</h1>
 
-					{{ .Content }}
-				{{ end }}
+				{{ .Content }}
 
 				<!-- TODO: Source files -->
 				<!-- TODO: Disqus integration -->
