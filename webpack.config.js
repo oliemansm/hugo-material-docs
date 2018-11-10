@@ -85,11 +85,7 @@ module.exports = env => { // eslint-disable-line complexity
 
         {
             test: /\.scss$/,
-            use: [
-                "style-loader", // creates style nodes from JS strings
-                "css-loader", // translates CSS into CommonJS
-                "sass-loader" // compiles Sass to CSS, using Node Sass by default
-            ]
+            use: ExtractTextPlugin.extract(["css-loader",  "sass-loader" ])
         }
       ]
     },
@@ -114,7 +110,12 @@ module.exports = env => { // eslint-disable-line complexity
       /* Provide JSX helper */
       new webpack.ProvidePlugin({
         JSX: path.resolve(__dirname, "src/assets/javascripts/providers/jsx.js")
-      })
+      }),
+
+      new ExtractTextPlugin({ // define where to save the file
+        filename: 'stylesheets/application.css',
+        allChunks: true,
+      }),
 
     ],
 

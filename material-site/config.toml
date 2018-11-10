@@ -41,8 +41,8 @@ googleAnalytics = ""
     	accent  = "teal"
 
     [params.font]
-    	text = "Ubuntu"
-    	code = "Ubuntu Mono"
+    	text = "Roboto"
+    	code = "Roboto Mono"
 
 
 [social]
