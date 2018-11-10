@@ -15,19 +15,27 @@ const nextWithLowerLevel = (item, items) => {
 }
 
 const toTOC = (items, idx = 0) => {
-  let previous = null
+  let current = null
   let toc = []
   for (let i = idx; i < items.length; i++) {
-    const item = items[i]
-    if (previous == null || item.level == previous.level) {
-      toc.push(item)
-      previous = item
-    } else if (item.level > previous.level) {
-      previous.children = toTOC(items, i + 1)
-      i += previous.children.length
-    } else {
+    const next = items[i]
+    if (current === null) {
+      current = next
+    } else if (current.level === next.level) {
+      toc.push(current)
+      current = next
+    } else if (current.level > next.level) {
+      toc.push(current)
       return toc
+    } else if (current.level < next.level) {
+      current.children = toTOC(items, i)
+      i += current.children.length - 1
+      toc.push(current)
+      current = null
     }
+  }
+  if (current !== null) {
+    toc.push(current)
   }
   return toc
 }
