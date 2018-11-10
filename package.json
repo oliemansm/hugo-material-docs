@@ -72,6 +72,7 @@
   "scripts": {
     "css:build": "node-sass --include-path scss src/assets/stylesheets --output dist/css",
     "js:build": "webpack --progress --colors",
-    "build": "npm run js:build"
+    "build": "npm run js:build",
+    "watch": "webpack --progress --colors --watch"
   }
 }

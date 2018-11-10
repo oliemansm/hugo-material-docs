@@ -9,7 +9,7 @@
     </script>
 
     <!--<script src="{{ "javascripts/application.js" | absURL }}"></script>-->
-    <script src="{{ "javascripts/application.v2.js" | absURL }}"></script>
+    <script src="{{ "javascripts/application.js" | absURL }}"></script>
     {{ range .Site.Params.custom_js }}
     <script src="{{ . | absURL }}"></script>
     {{ end }}
@@ -88,5 +88,6 @@
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
+    <script>app.initialize({version:"1.0.4",url:{base:""}})</script>
   </body>
 </html>

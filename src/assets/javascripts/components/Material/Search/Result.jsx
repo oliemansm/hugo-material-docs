@@ -159,7 +159,7 @@ export default class Result {
 
           /* Escape HTML */
           doc.title = escapeHTML(doc.title)
-          doc.text  = escapeHTML(doc.text)
+          doc.text  = escapeHTML(doc.contents)
 
           /* Associate section with parent document */
           if (hash) {
@@ -168,7 +168,7 @@ export default class Result {
             /* Override page title with document title if first section */
             if (doc.parent && !doc.parent.done) {
               doc.parent.title = doc.title
-              doc.parent.text  = doc.text
+              doc.parent.text  = doc.contents
               doc.parent.done  = true
             }
           }
@@ -220,6 +220,8 @@ export default class Result {
           /* Index fields */
           this.field("title", { boost: 10 })
           this.field("text")
+          this.field("tags")
+          this.field("categories")
           this.ref("location")
 
           /* Index documents */
