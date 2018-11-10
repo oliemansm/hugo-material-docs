@@ -2,10 +2,6 @@
   "name": "hugo-material-docs",
   "version": "1.0.0",
   "description": "Material Docs for Hugo",
-  "scripts": {
-    "css:build": "node-sass --include-path scss src/assets/stylesheets --output dist/css",
-    "build": "npm run css:build"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/oliemansm/hugo-material-docs.git"
@@ -72,5 +68,10 @@
   "engines": {
     "node": ">= 8"
   },
-  "private": true
+  "private": true,
+  "scripts": {
+    "css:build": "node-sass --include-path scss src/assets/stylesheets --output dist/css",
+    "js:build": "webpack --progress --colors",
+    "build": "npm run js:build"
+  }
 }
