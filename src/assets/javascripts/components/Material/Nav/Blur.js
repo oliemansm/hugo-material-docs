@@ -40,6 +40,10 @@ export default class Blur {
    * @param {(string|NodeList<HTMLElement>)} els - Selector or HTML elements
    */
   constructor(els) {
+    this.init(els)
+  }
+
+  init(els) {
     this.els_ = (typeof els === "string")
       ? document.querySelectorAll(els)
       : els

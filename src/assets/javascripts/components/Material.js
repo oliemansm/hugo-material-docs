@@ -27,6 +27,7 @@ import Search from "./Material/Search"
 import Sidebar from "./Material/Sidebar"
 import Source from "./Material/Source"
 import Tabs from "./Material/Tabs"
+import TableOfContents from "./Material/TableOfContents"
 
 /* ----------------------------------------------------------------------------
  * Module
@@ -39,5 +40,6 @@ export default {
   Search,
   Sidebar,
   Source,
-  Tabs
+  Tabs,
+  TableOfContents
 }

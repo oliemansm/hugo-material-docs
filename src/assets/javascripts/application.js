@@ -256,10 +256,13 @@ function initialize(config) { // eslint-disable-line func-style
         "[data-md-component=toc]",
         "[data-md-component=header]")))
 
+  /* Load table of contents */
+  Material.TableOfContents.render("#scrollspy")
+  const blur = new Material.Nav.Blur("[data-md-component=toc] [href]")
+
   /* Component: link blurring for table of contents */
   new Material.Event.MatchMedia("(min-width: 960px)",
-    new Material.Event.Listener(window, "scroll",
-      new Material.Nav.Blur("[data-md-component=toc] [href]")))
+    new Material.Event.Listener(window, "scroll", blur))
 
   /* Component: collapsible elements for navigation */
   const collapsibles =

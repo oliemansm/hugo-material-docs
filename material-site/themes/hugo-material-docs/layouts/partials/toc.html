@@ -19,28 +19,6 @@
   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
   IN THE SOFTWARE.
 -->
-{{ $currentPage := . }}
-{{ $currentMenuEntry := . }}
-{{ range .Site.Menus.main.ByWeight }}
-  {{ if eq $currentPage.URL (.Permalink | absURL | printf "%s") }}
-    {{ $currentMenuEntry = . }}
-  {{ end }}
-{{ end }}
 
 <!-- Table of contents -->
-<nav class="md-nav md-nav--secondary">
-  <!-- Render item list -->
-  {{ if $currentMenuEntry.HasChildren }}
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      {{ range $currentMenuEntry.Children }}
-        {{ $.Scratch.Set "currentTocItem" . }}
-        {{ partial "toc_item" $currentMenuEntry }}
-      {{ end }}
-
-      <!-- TODO: Source files -->
-
-      <!-- TODO: Disqus integration -->
-    </ul>
-  {{ end }}
-</nav>
+<nav id="scrollspy" class="md-nav md-nav--secondary"></nav>
