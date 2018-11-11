@@ -30,10 +30,9 @@ googleAnalytics = ""
 	# Syntax highlighting theme
 	highlight_css  = ""
 
-	search_enabled = true
-
 	[params.feature]
 		tabs = true
+		search = true
 
 	[params.logo]
 		icon = ""
@@ -50,6 +49,12 @@ googleAnalytics = ""
 	[[params.repositories]]
 		name = "hugo-material-docs"
 		url = "https://github.com/digitalcraftsman/hugo-material-docs"
+		menu = "Material"
+
+	[[params.repositories]]
+		name = "hugo-material-docs-v2"
+		url  = "https://github.com/oliemansm/hugo-material-docs"
+		menu = "Extensions"
 
 [social]
 	globe		 = "https://www.scopisto.com"
