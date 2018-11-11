@@ -21,6 +21,12 @@ hugo version
 
 Next, assuming you have Hugo up and running the `hugo-material-docs` theme can be installed with `git`:
 
+```java
+public void test(String val) {
+  return "test-string";
+}
+```
+
 ```sh
 # create a new Hugo website
 hugo new site my-awesome-docs
