@@ -1,5 +1,5 @@
-baseurl = "https://example.org/"
-languageCode = "en-us"
+baseURL = "https://example.org/"
+languageCode = "en"
 title = "Material Docs"
 theme = "hugo-material-docs"
 metadataformat = "yaml"
@@ -32,6 +32,9 @@ googleAnalytics = ""
 
 	search_enabled = true
 
+	[params.feature]
+		tabs = true
+
 	[params.logo]
 		icon = ""
 		image = "images/logo.png"
@@ -44,6 +47,9 @@ googleAnalytics = ""
   	text = "Roboto"
   	code = "Roboto Mono"
 
+	[[params.repositories]]
+		name = "hugo-material-docs"
+		url = "https://github.com/digitalcraftsman/hugo-material-docs"
 
 [social]
 	globe		 = "https://www.scopisto.com"
