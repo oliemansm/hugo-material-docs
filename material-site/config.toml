@@ -1,6 +1,6 @@
 baseURL = "https://example.org/"
 languageCode = "en"
-title = "Material Docs"
+title = "Material docs for Hugo"
 theme = "hugo-material-docs"
 metadataformat = "yaml"
 canonifyurls = true
@@ -57,32 +57,15 @@ googleAnalytics = ""
 	github   = "https://github.com/oliemansm"
 	linkedin = "https://linkedin.com/in/scopisto"
 
+[[menu.main]]
+	name	 = "Material"
+	url		 = "/"
+	weight = 1
 
 [[menu.main]]
-	name   = "Material"
-	url    = "/"
-	weight = 0
-
-[[menu.main]]
-	name   = "Getting started"
-	url    = "getting-started/"
+	name	 = "Extensions"
+	url		 = "/extensions"
 	weight = 10
-
-[[menu.main]]
-	name   = "Adding content"
-	url    = "adding-content/"
-	weight = 20
-
-[[menu.main]]
-	name   = "Roadmap"
-	url    = "roadmap/"
-	weight = 30
-
-[[menu.main]]
-	name   = "License"
-	url    = "license/"
-	weight = 40
-
 
 [blackfriday]
 	smartypants	= true

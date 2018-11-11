@@ -17,12 +17,15 @@
 
   <!-- Render item list -->
   <ul class="md-nav__list" data-md-scrollfix>
-    {{ $currentNode := . }}
+    {{ $currentPage := . }}
 
     {{ range .Site.Menus.main.ByWeight }}
-
-    {{ $.Scratch.Set "currentMenuEntry" . }}
-      {{ partial "nav_item" $currentNode }}
+      {{ if eq $currentPage.Params.menu.main.parent .Name }}
+        {{ range .Children }}
+          {{ $.Scratch.Set "currentMenuEntry" . }}
+          {{ partial "nav_item" $currentPage }}
+        {{ end }}
+      {{ end }}
     {{ end }}
   </ul>
 </nav>

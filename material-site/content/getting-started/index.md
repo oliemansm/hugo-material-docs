@@ -2,6 +2,9 @@
 date: 2016-03-09T00:11:02+01:00
 title: Getting started
 weight: 10
+menu:
+  main:
+    parent: 'Material'
 ---
 
 ## Installation
