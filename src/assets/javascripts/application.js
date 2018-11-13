@@ -104,6 +104,9 @@ function initialize(config) { // eslint-disable-line func-style
       wrap.children[0].appendChild(table)
     })
 
+    /* Hide title if navigation is empty */
+
+
     /* Clipboard integration */
     if (Clipboard.isSupported()) {
       const blocks = document.querySelectorAll(".codehilite > pre, pre > code")
