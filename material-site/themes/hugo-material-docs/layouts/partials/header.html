@@ -43,7 +43,7 @@
     </div>
 
     <!-- Repository containing source -->
-    {{ if .Params.menu.main.parent }}
+    {{ if isset .Params.menu "main" }}
       {{ $currentPage := . }}
       {{ range .Site.Params.repositories }}
         {{ if eq $currentPage.Params.menu.main.parent .menu }}
